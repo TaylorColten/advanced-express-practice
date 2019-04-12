@@ -9,6 +9,11 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
+app.use(commentsRoutes);
+app.use(contactsRoutes);
+app.use(productsRoutes);
+app.use(vehiclesRoutes);
+
 const port = process.env.PORT || 4001;
 
 app.listen(port, () => {
